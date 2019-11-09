@@ -1,0 +1,92 @@
+Q1) Check if number is a perfect number or not
+
+OR
+https://www.hackerrank.com/challenges/grading/editorial
+
+Code-->
+void solution() {
+     int n, x;
+     cin>>n;
+     for(int i=0; i<n; i++){
+        cin>>x;
+        if(x>=38 and x%5>=3){
+            while(x%5!=0){
+               x++;
+            }
+        }
+        cout<<x<<endl;
+     }
+}
+
+int main () {
+    solution();
+    return 0;
+}
+
+Solution-->
+
+Q2) Program to check whether a given string is a palindrome or not
+
+Solution-->
+
+Q3) Given an array of integers, and a divisor variable x print all elements that are divisible by x. Solve the problem without using the '/' or '%' or any other division operator
+
+Q4) aaaaa
+    a   a
+    a   a
+    aaaaa
+
+OR
+
+Given n= number of lines to print and x=an integer print table of x in the following way:
+
+e.g x=5, n=4
+
+5
+10 15
+20 25 30 
+35 40 45 50
+
+Code-->
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int num=1,n,x,i,j;
+clrscr();
+printf("Enter number of lines:");
+scanf("%d",&n);
+printf("Enter number X:");
+scanf("%d",&x);
+for(i=0;i<n;i++)
+{
+for(j=0;j<=i;j++)
+{
+printf("%d ",num*x);
+num+=1;
+}
+printf("\n");
+}
+getch();
+}
+
+Q5) Toggle Case of characters in a string.  
+
+Code-->
+
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+  char str1[100];
+  printf("Enter a string:");
+  gets(str1);
+  for(int i=0;str1[i]!='\0';i++)
+  {
+    if(str1[i]>='a' && str1[i]<='z')
+       str1[i] = str1[i] - 32;
+    else if(str1[i]>='A' && str1[i]<='Z')
+       str1[i] = str1[i] + 32;
+  }
+  printf("given string in toggled state:%s",str1);
+}
