@@ -9,42 +9,52 @@ int main()
    scanf("%c",str1);
    printf("\nEnter second string: ");
    scanf("%c",str2);
-   for(i=0; str1[i]!='\0'; ++i)
+   for(i=1; str1[i]!='\0'; ++i)
    for(j=0; str2[j]!='\0'; ++j)
    {
       str1[i]=str2[j];
    }
    str1[i]='\0';
    Printf("\nOutput: %s",str1);
+   return 0;
 }
 
-Solution:
+Solution-->
+
+LOGICAL-
+Line 8 : for(i=0;str1[i]!='\0';i++);
+Line 9 : for(j=0;str2[j]!='\0';j++,i++)
+
+
+SYNTACTICAL-
+Line 1 : #include <stdio.h>
+Line 3 : scanf("%s",str1)
+Line 5 : scanf("%s",str1)
+Line 15 : printf("\nOutput: %s",str1);
 
 Q2) Print all prime numbers upto n(C):
 
 Code-->
 #include<stdio.h>
-void main()
+Void main()
 {
-     int n,i,j,ct=0;
-     printf("Enter any number \n");
-     scanf("%d",&n);
-     printf(" All prime numbers are -\n");
-     ct=0;
+     int n,i,j,flag;
+     printf("Enter any number:\n");
+     scanf("%d",n);
+     printf("All prime numbers upto %d are -\n",n);
+     flag=0;
      for(i=2;i<n;i++)
      {
-            
-             for(j=2;j<=n;j++)
+             for(j=2;j<i;j++)
              {
-	if(j%i==0)
-                     {
-                               ct=1;
-                               break;
-                     }
+	          if(j%i==0)
+                  {
+                        flag=1;
+                        break;
+                  }
              }
-             if(ct==0)
-             {
-                 printf("%d \t",i);
+             if(flag==0)
+                 printf('%d \t',i);
              }
      }
      getch();
@@ -52,6 +62,17 @@ void main()
 
 
 Solution-->
+
+LOGICAL-
+Line 8 : flag=0; goes inside the first for loop
+Line 13 : if(i%j==0)
+
+
+SYNTACTICAL-
+Line 2 : void main()
+Line 6 : scanf("%d",&n);
+Line  19 : Either complete the brackets for if condition or remove the ending bracket
+Line 20 : printf("%d \t",i);
 
 Q3) Find maximum element of array(C):
 
@@ -78,6 +99,17 @@ void main()
 
 Solution-->
 
+LOGICAL-
+Line 12 : for(i=n;i>=1;i--)
+Line 16 : printf() goes out of the for loop
+
+
+SYNTACTICAL-
+Line 5 : int arr[n]; creation of array after taking input n
+Line 10 : scanf("%d",&arr[i]);
+Line 11 : max=arr[0];
+Line 16 : printf("Largest element: %d",max);
+
 Q4)Find product of two matrices(C++):
 
 Code-->
@@ -86,8 +118,8 @@ using namespace std;
 
 int main()
 {
-	int m1[3][3]={(1,2,3),(4,5,6),(7,8,9)};
-	int m2[3][3]={{1,2,3},{4,5,6},{7,8,9}};
+	int m1[][3]={{1,2,3}{4,5,6}{7,8,9}};
+	int m2[3][3]={1,2,3,4,5,6,7,8,9};
 	int m3[3][3];
 	int i,j,k;
 	
@@ -99,13 +131,13 @@ int main()
 			for(k=0,k<3,k++)
 			{
 				temp+=m1[i][k]+m2[k][j];
-				}
-			m3[i]j]=temp;
 			}
+			m3[i]j]=temp;
 		}
-		
-	 for(i=0;i<3;i++)
-	 {
+	}
+        cout<<"Product of matrices:"<<endl;
+	for(i=0;i<3;i++)
+	{
 	  for(j=0;j<3;j++)
 	     cout<<m3[i][k]<<" ";
 	  cout<<endl;
@@ -113,6 +145,17 @@ int main()
 } 
 
 Solution-->
+
+LOGICAL-
+Line 18 : temp+=m1[i][k]*m2[k][j];
+Line 27 : cout<<m3[i][j]<<" ";
+
+
+SYNTACTICAL-
+Line 6 : int m1[][3]={{1,2,3},{4,5,6},{7,8,9}};
+Line 16 : for(k=0;k<3;k++)
+Line 20 : m3[i][j]=temp;
+Line 29 : }
 
 Q5) To find reverse of a number(C++):
 
@@ -130,12 +173,23 @@ int main()
 		rem=num%10;
 		rev=rev+rem;
 		num=num/100;
-		}
+	}
         cout <<"Reverse :"+rev;
 	return 0;
 }
 
 Solution-->
+
+LOGICAL-
+Line 12 : rev=rev*10+rem;
+Line 13 : num=num/10;
+
+
+SYNTACTICAL-
+Line 7 : cout>>"Enter a number:";
+Line 7 : cout<<"Enter a number:";
+Line 8 : cin>>num;
+Line 15 : cout <<"Reverse :"<<rev;
 		
 		
 
