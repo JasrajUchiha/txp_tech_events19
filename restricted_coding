@@ -2,3 +2,10 @@ Q1) volleyball which team wins stuff:
 
 restrictions: no loops, no conditional statements no goto.
 
+Q2)Check whether a number can be expressed as a sum of two prime numbers
+
+restrictions:No if statements, no switch stetments
+
+Q3)Algorithm to find the number of days in a given month of a given year.
+
+restrictions: compulsary 2 functions excluding the main function, no if statements no switch statement
