@@ -1,5 +1,20 @@
 Q1) Check if number is a perfect number or not
 
+Problem Output Statement:
+
+Test case 1:
+     Enter a number: 6
+     6 is a perfect number since Σi=0,13=13 for all 13%i=0
+
+Test Case 2:
+     Enter a number: 13
+     13 is not a perfect number since Σi=0,13!=13 for all 13%i==0
+
+
+
+Solution-->
+
+
 OR
 https://www.hackerrank.com/challenges/grading/editorial
 
@@ -23,13 +38,53 @@ int main () {
     return 0;
 }
 
-Solution-->
+Problem Output Statement:
+
+Test case 1:
+     Enter the average marks: 74
+     The final grade is 75
+     
+Test case 2:
+     Enter the average marks: 71
+     The final grade is 71
+
+Test case 3:
+     Enter the average marks: 36
+     Fail
+ 
+ Test case 4:
+     Enter the average marks: 38
+     The Final grade is: 40
+ 
+ Test case 5:
+     Enter the average marks:55
+     The final grade is 55
+     
+ Test case 6: 
+     Enter the average marks: 93
+     The final grade is 95
+
+ 
 
 Q2) Program to check whether a given string is a palindrome or not
 
 Solution-->
 
-Q3) Given an array of integers, and a divisor variable x print all elements that are divisible by x. Solve the problem without using the '/' or '%' or any other division operator
+Problem Output Statement:
+     
+Test case 1:
+     Enter a string: malayalam
+     YES
+     
+Test case 2:
+     Enter a string: abbaabba
+     YES
+Test case 3:
+     Enter a string: jajajaaj
+     NO
+     
+
+#controversial Q3) Given an array of integers, and a divisor variable x print all elements that are divisible by x. Solve the problem without using the '/' or '%' or any other division operator
 
 Q4) aaaaa
     a   a
@@ -90,3 +145,15 @@ void main()
   }
   printf("given string in toggled state:%s",str1);
 }
+
+
+Problem Output Statement:
+
+Test case 1:
+     Enter a string: AbaSBSANXbsha
+     aBAsbsanxBSHA
+     
+Test case 2:
+     Enter a string: ashcDD
+     ASHCdd
+
