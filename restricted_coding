@@ -5,3 +5,56 @@ restrictions: no loops, no conditional statements no goto.
 Q2) Print hello world without using semicolon.
 
 saluchans be ez
+
+2)Check whether a number can be expressed as a sum of two prime numbers
+restrictions:only while loop no other loop,not more than 4 if statements, no switch stetments
+
+Solution:
+// C program to check whether a number can be expressed as a sum of two prime numbers
+#include<stdio.h>
+#include<conio.h>
+int sum_of_two_primes(int n);
+int main()
+{
+int n, i,flag=0;
+
+printf("Enter the number:");
+scanf("%d", &n);
+i=2;
+while(i<=n/2)
+{
+// Condition for i to be prime
+if(sum_of_two_primes(i) == 1)
+{
+if(sum_of_two_primes(n-i) == 1)
+{
+printf("\n%d can be expressed as the sum of %d and %d\n\n", n, i, n - i);
+flag = 1;
+}
+}
+++i;
+}
+
+if(flag == 0)
+printf("%d cannot be expressed as the sum of two prime numbers\n", n);
+
+return 0;
+}
+
+int sum_of_two_primes(int n)
+{
+int i, isPrime = 1;
+i=2;
+while(i<=n/2)
+{
+if(n % i == 0)
+{
+isPrime = 0;
+break;
+}
+++i;
+}
+
+return isPrime;
+}
+
