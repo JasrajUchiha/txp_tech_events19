@@ -6,6 +6,8 @@ Q2) Print hello world without using semicolon.
 
 saluchans be ez
 
+"""
+The following lines of code are up for review
 2)Check whether a number can be expressed as a sum of two prime numbers
 restrictions:only while loop no other loop,not more than 4 if statements, no switch stetments
 
@@ -57,4 +59,5 @@ break;
 
 return isPrime;
 }
-
+code lines that are up for review end here
+"""
