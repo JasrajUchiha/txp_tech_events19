@@ -1,1 +1,25 @@
+Q1) Program to count the number of vowels in the caesar cipher of a string. (Caesar Cipher for a positive shift by 3)
 
+#It is a type of substitution cipher in which each letter in the plaintext is 'shifted' a certain number of places down the alphabet. For example, with a shift of 1, A would be replaced by B, B would become C, and so on.
+
+Solution-->
+
+#include <stdio.h>
+ 
+int main()
+{
+  	char s[50],c[50];
+  	int i,temp,count=0;
+  	scanf("%s",s);
+  	for(i=0;s[i]!='\0';i++)
+  	{
+  		temp=(int)s[i];
+  		c[i]=(char) temp+3;
+  		}
+  	c[i]='\0';
+  	for(i=0;c[i]!='\0';i++)
+  		if (c[i]=='a'||c[i]=='e'||c[i]=='i'||c[i]=='o'||c[i]=='u'||c[i]=='A'||c[i]=='E'||c[i]=='I'||c[i]=='O'||c[i]=='U')
+  		count+=1;
+  	printf("%d",count);
+  	return 0;
+}
